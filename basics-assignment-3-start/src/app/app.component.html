@@ -30,11 +30,11 @@
       </button>
       <p *ngIf="showSecret">Secret Password = "Tune"</p>
       <div
-        *ngFor="let item of log"
+        *ngFor="let item of log; let i = index"
         [ngStyle]="{
-          backgroundColor: item >= 5 ? 'lightblue' : 'lightgreen'
+          backgroundColor: i >= 4 ? 'lightblue' : 'lightgreen'
         }"
-        [ngClass]="{ 'white-text': item >= 5 }"
+        [ngClass]="{ 'white-text': i >= 4 }"
       >
         {{ item }}
       </div>
